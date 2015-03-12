@@ -43,7 +43,9 @@ class PushstateAnchor extends AnchorElement with Polymer, Observable {
         (event is KeyboardEvent && (event.ctrlKey || event.metaKey || event.which == 2))) {
       return;
     }
-
+	
+	event.preventDefault();
+	
     Map stateMap = {};
     if (this.state != null){
       stateMap = JSON.decode(this.state);
@@ -69,6 +71,6 @@ class PushstateAnchor extends AnchorElement with Polymer, Observable {
       window.dispatchEvent(fallbackEvent);*/ //TODO
     }
 
-    event.preventDefault();
+    
   }
 }

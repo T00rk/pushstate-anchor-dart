@@ -18,8 +18,11 @@
 
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<polymer-element name="pushstate-anchor" extends="a" attributes="state"><!-- title href          -->
-<template>
-<link href="pushstate_anchor.css" rel="stylesheet">
-</template> <script type="application/dart" src="pushstate_anchor.dart"></script> </polymer-element>
+<polymer-element name="pushstate-anchor" extends="a" attributes="state">
+    <template>
+        <link href="pushstate_anchor.css" rel="stylesheet">
+        <content></content>
+    </template> 
+    <script type="application/dart" src="pushstate_anchor.dart"></script> 
+</polymer-element>
 
